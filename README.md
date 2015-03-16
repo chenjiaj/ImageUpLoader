@@ -10,7 +10,8 @@
 ##
 html文档
 
-'<div class="image-wrapper">
+'
+<div class="image-wrapper">
     <div id="imageUpLoader">
         <!--用来存放item-->
         <div id="dndArea">
