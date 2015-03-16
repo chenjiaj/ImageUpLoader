@@ -1,0 +1,259 @@
+@wrapper-height:400px;
+@dndArea-padding-top:80px;
+@dndArea-bg-top:0;
+#imageUpLoader{
+    width: 80%;
+    //min-height: @wrapper-height;
+    border:3px dashed #e6e6e6;
+    margin: 0 auto;
+
+    .placeholder{
+        background: url("../img/image.png") center @dndArea-bg-top no-repeat;
+       // min-height: @wrapper-height;
+        padding-top: @dndArea-padding-top;
+        width: 100%;
+        box-sizing: border-box;
+        text-align: center;
+
+        .webuploader-pick{
+            padding: 10px 30px;
+            box-sizing:content-box;
+            font-weight: bold;
+        }//.webuploader-pick end
+        p{
+            margin-top: 10px;
+            color: #ccc;
+            font-size: 18px;
+        }
+    }//.placeholder end
+
+    #queueList{
+        padding: 20px;
+        li{
+            list-style: none;
+            .progress{
+                width: 100%;
+                background: black;
+                height: 30px;
+                span{
+                    display: inline-block;
+                    height: 30px;
+                    background-color:#fff ;
+                }
+            }
+        }
+        .file-item{
+            width: 100px;
+            height: 100px;
+            border:1px solid #ccc;
+            padding: 5px;
+            display: inline-block;
+            margin: 5px;
+            position: relative;
+            box-sizing: content-box;
+            .info{
+                position: absolute;
+                background: rgba(0,0,0,0.5);
+                width: 100%;
+                height: 30px;
+                line-height: 30px;
+                left: 0;
+                bottom: 0;
+                color: #fff;
+                font-size: 14px;
+                text-align: center;
+            }
+            .thumb{
+                text-align: center;
+                font-weight: 600;
+                font-size: 22px;
+                color: #777;
+                margin-top: 50px;
+            }
+            .operate{
+                position: absolute;
+                left: 0;
+                top: 0;
+                background: rgba(0,0,0,0.5);
+                width: 100%;
+                height: 35px;
+                text-align: right;
+                color: #fff;
+                line-height: 35px;
+                span{
+                    color: #fff;
+                    width: 25px;
+                    cursor: pointer;
+                    display: inline-block;
+                    &:hover{
+                        color: #00b7ee;
+                    }
+                }
+            }
+            .error{
+                background: #f43838;
+            }
+            .success{
+                background: #00b7ee;
+            }
+        }
+    }
+
+    .statusBar{
+        height: 63px;
+        border-top: 1px solid #dadada;
+        padding: 0 20px;
+        line-height: 63px;
+        vertical-align: middle;
+        position: relative;
+        .progress {
+            border: 1px solid #1483d8;
+            width: 198px;
+            background: #fff;
+            height: 18px;
+            position: relative;
+            display: inline-block;
+            text-align: center;
+            line-height: 20px;
+            color: #6dbfff;
+            position: relative;
+            margin: 0 10px 0 0;
+            .info {
+                display: inline-block;
+                font-size: 14px;
+                color: #666666;
+            }
+        }
+        .btns {
+
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            line-height: 40px;
+            #filePicker2 {
+                display: inline-block;
+                float: left;
+                .webuploader-pick{
+                    background: #ffffff;
+                    border: 1px solid #cfcfcf;
+                    color: #565656;
+                    padding: 0 18px;
+                    display: inline-block;
+                    border-radius: 3px;
+                    margin-left: 10px;
+                    cursor: pointer;
+                    font-size: 14px;
+                    float: left;
+                    margin-right: 20px;
+                }
+            }
+            .uploadBtn {
+                float: right;
+                position: relative;
+                display: inline-block;
+                cursor: pointer;
+                background: #00b7ee;
+                padding:0 15px;
+                color: #fff;
+                text-align: center;
+                border-radius: 3px;
+                overflow: hidden;
+
+            }
+
+            .disabled{
+                background-color: #ccc !important;
+                cursor: not-allowed;
+            }
+        }
+    }
+}//#imageUpLoader end
+
+.hide{
+    display: none;
+}
+//表格样式
+#fileList.tableStyle{
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    text-align: center;
+    margin-top: 13px;
+    th{
+        background-color: #ededed;
+        border-top:1px solid #dadada;
+        padding: 13px 0;
+    }
+    td{
+        border-bottom:1px solid #e9e9e9;
+        padding: 12px 0;
+        min-height: 100px;
+        &:not(.delete){
+            cursor: move;
+        }
+    }
+    td{
+        font-weight: normal;
+        a{
+            color:#0066cc;
+            margin-right: 10px;
+            text-decoration: none;
+            &:last-child{
+                margin-right: 0px;
+            }
+            .icons-lookup{
+                background: url(../img/icons.png) -2px -25px no-repeat;
+            }
+            .icons-set{
+                background: url(../img/icons.png) 0 -43px no-repeat;
+            }
+        }
+        img{
+            cursor: pointer;
+        }
+    }
+}
+//放大图片展示的容器
+.dialog{
+    position: fixed;
+    left: 50%;
+    width: 800px;
+    margin-left: -400px;
+    padding: 20px 10px;
+    background-color: #fff;
+    top:100px;
+    z-index: 1000;
+    text-align: center;
+    .toggle{
+        position: absolute;
+        z-index: 10000;
+        top:200px;
+        width: 50px;
+        height: 50px;
+        background-color: #000;
+        opacity: 0.5;
+        cursor: pointer;
+        color: #fff;
+        line-height: 50px;
+        text-align: center;
+        span{
+            font-size: 30px;
+        }
+    }
+    .prev{
+        left: 20px;
+    }
+    .next{
+        right: 20px;
+    }
+}
+.mask{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.4;
+    left: 0;
+    top: 0;
+    z-index: 100;
+}
