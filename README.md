@@ -9,8 +9,8 @@
 <script type="text/javascript" src="js/webuploader.js"></script>
 ##
 html文档
-<code>
-<div class="image-wrapper">
+
+'<div class="image-wrapper">
     <div id="imageUpLoader">
         <!--用来存放item-->
         <div id="dndArea">
@@ -45,8 +45,8 @@ html文档
             <th>操作</th>
         </tr>
     </table>
-</div>
-</code>
+</div>'
+
 ##
 修改样式更改imageuploader.less
 ##
