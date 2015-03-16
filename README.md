@@ -1,12 +1,9 @@
 # ImageUpLoader
 图片上传demo,使用webuploader和jquery-ui-sortable 插件
 ##拖拽效果使用的插件    
-<script type="text/javascript" src="js/jquery.ui.core.js"></script>
-<script type="text/javascript" src="js/jquery.ui.widget.js"></script>
-<script type="text/javascript" src="js/jquery.ui.mouse.js"></script>
-<script type="text/javascript" src="js/jquery.ui.sortable.js"></script>
+jquery.ui.core.js\jquery.ui.widget.js\jquery.ui.mouse.js\js/jquery.ui.sortable.js
 ##上传文件或图片需要的插件
-<script type="text/javascript" src="js/webuploader.js"></script>
+js/webuploader.js
 ##
 修改样式更改imageuploader.less
 ##
