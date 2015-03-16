@@ -259,7 +259,8 @@ var ImgUpLoader;
             var _this = this;
                 this.QueList[file.id] = {
                     size:file.size,
-                    name:file.name
+                    name:file.name,
+                    rotation:0
                 };
             var $li = $(
                     '<li id="' + file.id + '" class="file-item thumbnail">' +
@@ -338,7 +339,9 @@ var ImgUpLoader;
 
         },
         operate:function(the){//操作旋转和删除按钮时触发函数
-            var file = the.closest('li');
+            var li = the.closest('li');
+            var file = this.uploader.getFile(li.attr('id'));
+            var item = this.QueList[li.attr('id')];
             var supportTransition = (function(){
                 var s = document.createElement('p').style,
                     r = 'transition' in s ||
@@ -358,11 +361,11 @@ var ImgUpLoader;
                     file.rotation +=90;
                     break;
                 case 'trash':
-                    this.uploader.removeFile(file.attr('id'));
+                    this.uploader.removeFile(file);
                     this.fileCount --;
-                    this.fileSize -= this.QueList[file.attr('id')];
-                    delete this.QueList[file.attr('id')];
-                    $('#'+file.attr('id')).remove();
+                    this.fileSize -= item.size;
+                    delete this.QueList[file.id];
+                    $('#'+file.id).remove();
             }
 
             if (supportTransition) {
