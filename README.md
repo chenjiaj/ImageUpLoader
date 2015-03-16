@@ -6,7 +6,7 @@ jquery.ui.widget.js
 jquery.ui.mouse.js
 jquery.ui.sortable.js
 ##上传文件或图片需要的插件
-js/webuploader.js
+webuploader.js
 ##
 修改样式更改imageuploader.less
 ##
