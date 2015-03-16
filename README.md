@@ -9,8 +9,7 @@
 <script type="text/javascript" src="js/webuploader.js"></script>
 ##
 html文档
-'
-<!--dom结构部分-->
+'<!--dom结构部分-->
 <div class="image-wrapper">
     <div id="imageUpLoader">
         <!--用来存放item-->
@@ -46,8 +45,7 @@ html文档
             <th>操作</th>
         </tr>
     </table>
-</div>
-'
+</div>'
 
 ##
 修改样式更改imageuploader.less
